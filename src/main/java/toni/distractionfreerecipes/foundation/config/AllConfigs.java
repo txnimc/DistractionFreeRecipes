@@ -4,11 +4,13 @@ import java.util.EnumMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 import java.util.function.BiConsumer;
 import java.util.function.Supplier;
 
 import toni.distractionfreerecipes.DistractionFreeRecipes;
 import toni.lib.config.ConfigBase;
+import com.electronwill.nightconfig.core.UnmodifiableConfig;
 
 #if FABRIC
     import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
@@ -49,19 +51,9 @@ public class AllConfigs {
     private static final Map<ModConfig.Type, ConfigBase> CONFIGS = new EnumMap<>(ModConfig.Type.class);
 
     private static CClient client;
-    private static CCommon common;
-    private static CServer server;
 
     public static CClient client() {
         return client;
-    }
-
-    public static CCommon common() {
-        return common;
-    }
-
-    public static CServer server() {
-        return server;
     }
 
     public static ConfigBase byType(ModConfig.Type type) {
@@ -83,8 +75,6 @@ public class AllConfigs {
 
     public static void register(BiConsumer<ModConfig.Type, #if after_21_1 ModConfigSpec #else ForgeConfigSpec #endif> registration) {
         client = register(CClient::new, ModConfig.Type.CLIENT);
-        common = register(CCommon::new, ModConfig.Type.COMMON);
-        server = register(CServer::new, ModConfig.Type.SERVER);
 
         for (Entry<ModConfig.Type, ConfigBase> pair : CONFIGS.entrySet())
             registration.accept(pair.getKey(), pair.getValue().specification);
@@ -96,9 +86,17 @@ public class AllConfigs {
 
         for (Entry<ModConfig.Type, ConfigBase> pair : CONFIGS.entrySet())
         {
-            for (var entry : pair.getValue().specification.getSpec().entrySet()) {
-                if (existing.add(entry.getKey()))
-                    translationBuilder.add(DistractionFreeRecipes.ID + ".configuration." + entry.getKey(), entry.getKey());
+            addEntrySetTranslations(existing, pair.getValue().specification.getSpec().entrySet(), translationBuilder);
+        }
+    }
+
+    public static void addEntrySetTranslations(HashSet<String> existing, Set<? extends UnmodifiableConfig.Entry> config, FabricLanguageProvider.TranslationBuilder translationBuilder) {
+        for (var entry : config) {
+            if (existing.add(entry.getKey()))
+                translationBuilder.add(DistractionFreeRecipes.ID + ".configuration." + entry.getKey(), entry.getKey());
+
+            if (entry.getValue() instanceof com.electronwill.nightconfig.core.AbstractConfig children) {
+                addEntrySetTranslations(existing, children.entrySet(), translationBuilder);
             }
         }
     }

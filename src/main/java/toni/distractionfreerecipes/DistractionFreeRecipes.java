@@ -47,7 +47,7 @@ import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 #endif
 public class DistractionFreeRecipes #if FABRIC implements ModInitializer, ClientModInitializer #endif
 {
-    public static final String MODNAME = "Distraction Free Recipes (JEI/REI/EMI)";
+    public static final String MODNAME = "Distraction Free Recipes (EMI)";
     public static final String ID = "distraction_free_recipes";
     public static final Logger LOGGER = LogManager.getLogger(MODNAME);
 
@@ -93,8 +93,6 @@ public class DistractionFreeRecipes #if FABRIC implements ModInitializer, Client
             ConfigScreenFactoryRegistry.INSTANCE.register(DistractionFreeRecipes.ID, ConfigurationScreen::new);
             #endif
         #endif
-
-        RecipeTreeButtonWidget
     }
 
     // Forg event stubs to call the Fabric initialize methods, and set up cloth config screen
