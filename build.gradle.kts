@@ -5,11 +5,19 @@ val templateSettings = object : BlahajSettings {
 	// -------------------- Dependencies ---------------------- //
 	override val depsHandler: BlahajDependencyHandler get() = object : BlahajDependencyHandler {
 		override fun addGlobal(mod : ModData, deps: DependencyHandler) {
+			deps.modImplementation(modrinth("emi", "1.1.18+${mod.mcVersion}+${mod.loader}"))
 
 		}
 
 		override fun addFabric(mod : ModData, deps: DependencyHandler) {
+			when (mod.mcVersion) {
+				"1.21.1" -> {
 
+				}
+				"1.20.1" -> {
+
+				}
+			}
 		}
 
 		override fun addForge(mod : ModData, deps: DependencyHandler) {

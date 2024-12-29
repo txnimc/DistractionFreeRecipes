@@ -1,4 +1,4 @@
-package toni.examplemod.foundation.config;
+package toni.distractionfreerecipes.foundation.config;
 
 import java.util.EnumMap;
 import java.util.HashSet;
@@ -7,7 +7,7 @@ import java.util.Map.Entry;
 import java.util.function.BiConsumer;
 import java.util.function.Supplier;
 
-import toni.examplemod.ExampleMod;
+import toni.distractionfreerecipes.DistractionFreeRecipes;
 import toni.lib.config.ConfigBase;
 
 #if FABRIC
@@ -98,7 +98,7 @@ public class AllConfigs {
         {
             for (var entry : pair.getValue().specification.getSpec().entrySet()) {
                 if (existing.add(entry.getKey()))
-                    translationBuilder.add(ExampleMod.ID + ".configuration." + entry.getKey(), entry.getKey());
+                    translationBuilder.add(DistractionFreeRecipes.ID + ".configuration." + entry.getKey(), entry.getKey());
             }
         }
     }

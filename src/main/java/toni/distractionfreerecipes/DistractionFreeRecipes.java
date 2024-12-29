@@ -1,6 +1,7 @@
-package toni.examplemod;
+package toni.distractionfreerecipes;
 
-import toni.examplemod.foundation.config.AllConfigs;
+import dev.emi.emi.widget.RecipeTreeButtonWidget;
+import toni.distractionfreerecipes.foundation.config.AllConfigs;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -42,15 +43,15 @@ import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 
 
 #if FORGELIKE
-@Mod("example_mod")
+@Mod("distraction_free_recipes")
 #endif
-public class ExampleMod #if FABRIC implements ModInitializer, ClientModInitializer #endif
+public class DistractionFreeRecipes #if FABRIC implements ModInitializer, ClientModInitializer #endif
 {
-    public static final String MODNAME = "Example Mod";
-    public static final String ID = "example_mod";
+    public static final String MODNAME = "Distraction Free Recipes (JEI/REI/EMI)";
+    public static final String ID = "distraction_free_recipes";
     public static final Logger LOGGER = LogManager.getLogger(MODNAME);
 
-    public ExampleMod(#if NEO IEventBus modEventBus, ModContainer modContainer #endif) {
+    public DistractionFreeRecipes(#if NEO IEventBus modEventBus, ModContainer modContainer #endif) {
         #if FORGE
         var context = FMLJavaModLoadingContext.get();
         var modEventBus = context.getModEventBus();
@@ -77,9 +78,9 @@ public class ExampleMod #if FABRIC implements ModInitializer, ClientModInitializ
         #if FABRIC
             AllConfigs.register((type, spec) -> {
                 #if AFTER_21_1
-                NeoForgeConfigRegistry.INSTANCE.register(ExampleMod.ID, type, spec);
+                NeoForgeConfigRegistry.INSTANCE.register(DistractionFreeRecipes.ID, type, spec);
                 #else
-                ForgeConfigRegistry.INSTANCE.register(ExampleMod.ID, type, spec);
+                ForgeConfigRegistry.INSTANCE.register(DistractionFreeRecipes.ID, type, spec);
                 #endif
             });
         #endif
@@ -89,9 +90,11 @@ public class ExampleMod #if FABRIC implements ModInitializer, ClientModInitializ
     public void onInitializeClient() {
         #if AFTER_21_1
             #if FABRIC
-            ConfigScreenFactoryRegistry.INSTANCE.register(ExampleMod.ID, ConfigurationScreen::new);
+            ConfigScreenFactoryRegistry.INSTANCE.register(DistractionFreeRecipes.ID, ConfigurationScreen::new);
             #endif
         #endif
+
+        RecipeTreeButtonWidget
     }
 
     // Forg event stubs to call the Fabric initialize methods, and set up cloth config screen

@@ -1,4 +1,4 @@
 {
-  "example_mod.configuration.client": "client",
-  "example_mod.configuration.example": "example"
+  "distraction_free_recipes.configuration.client": "client",
+  "distraction_free_recipes.configuration.example": "example"
 }
