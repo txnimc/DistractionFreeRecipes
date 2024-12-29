@@ -1,0 +1,31 @@
+[21:18:53] [main/INFO] (Launcher) ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.20.1-5, --assetsDir, C:\Users\Toni\.gradle\caches\fabric-loom\assets, --gameDir, ., --fml.forgeVersion, 47.2.16, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, -mixin.config, mixins.example_mod.json]
+[21:18:53] [main/INFO] (Launcher) ModLauncher 10.0.10+10.0.10+main.22f00f84 starting: java version 21.0.4 by Amazon.com Inc.; OS Windows 11 arch amd64 version 10.0
+[21:18:53] [main/INFO] (ImmediateWindowHandler) Loading ImmediateWindowProvider fmlearlywindow
+[21:18:54] [main/INFO] (EARLYDISPLAY) Trying GL version 4.6
+[21:18:54] [main/INFO] (EARLYDISPLAY) Requested GL version 4.6 got version 4.6
+[21:18:54] [main/INFO] (mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/Toni/.gradle/caches/modules-2/files-2.1/dev.architectury/mixin-patched/0.8.5.11/dd886ad7af30604cbd9aa0f1eb9fb95b079013ca/mixin-patched-0.8.5.11.jar%23127!/ Service=ModLauncher Env=CLIENT
+[21:18:54] [main/WARN] (ModFileParser) Mod file C:\Users\Toni\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.2.16\f577d6351d9e103670e660dbb191cabd05e2144b\javafmllanguage-1.20.1-47.2.16.jar is missing mods.toml file
+[21:18:54] [main/WARN] (ModFileParser) Mod file C:\Users\Toni\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.2.16\bda363aeb14759edae81402cdbfcd1a3bbcae360\lowcodelanguage-1.20.1-47.2.16.jar is missing mods.toml file
+[21:18:54] [main/WARN] (ModFileParser) Mod file C:\Users\Toni\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.2.16\b072fa4c6b9d05781e7fc62d4c649afa6745014\mclanguage-1.20.1-47.2.16.jar is missing mods.toml file
+[21:18:54] [main/WARN] (ModFileParser) Mod file C:\Users\Toni\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.2.16\3045b348d13183b8dd93d2f00413c6cac0d36c64\fmlcore-1.20.1-47.2.16.jar is missing mods.toml file
+[21:18:54] [pool-2-thread-1/INFO] (EARLYDISPLAY) GL info: AMD Radeon RX 7800 XT GL version 4.6.0 Core Profile Context 24.7.1.240711, ATI Technologies Inc.
+[21:18:54] [main/INFO] (ModDiscoverer) Found mod file javafmllanguage-1.20.1-47.2.16.jar of type LANGPROVIDER with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@48c4245d
+[21:18:54] [main/INFO] (ModDiscoverer) Found mod file lowcodelanguage-1.20.1-47.2.16.jar of type LANGPROVIDER with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@48c4245d
+[21:18:54] [main/INFO] (ModDiscoverer) Found mod file mclanguage-1.20.1-47.2.16.jar of type LANGPROVIDER with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@48c4245d
+[21:18:54] [main/INFO] (ModDiscoverer) Found mod file fmlcore-1.20.1-47.2.16.jar of type LIBRARY with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@48c4245d
+[21:18:54] [main/INFO] (ModDiscoverer) Found mod file forge-1.20.1-47.2.16-minecraft-merged-c7e598b7a7-1.20.1-loom.mappings.1_20_1.layered+hash.1900676243-v2-forge-1.20.1-47.2.16.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@48c4245d
+[21:18:54] [main/INFO] (ModDiscoverer) Found mod file  of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@48c4245d
+[21:18:54] [main/INFO] (ModDiscoverer) Found mod file forge-1.20.1-1.0.20.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@48b22fd4
+[21:18:54] [main/INFO] (ModDiscoverer) Found mod file fabric-rendering-v1-3.0.8+66e9a48f77.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@48b22fd4
+[21:18:54] [main/INFO] (ModDiscoverer) Found mod file fabric-events-interaction-v0-0.6.2+0d0bd5a777.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@48b22fd4
+[21:18:54] [main/INFO] (ModDiscoverer) Found mod file fabric-networking-api-v1-1.3.11+503a202477.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@48b22fd4
+[21:18:54] [main/INFO] (ModDiscoverer) Found mod file fabric-command-api-v2-2.2.13+561530ec77.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@48b22fd4
+[21:18:54] [main/INFO] (ModDiscoverer) Found mod file fabric-api-base-0.4.31+ef105b4977.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@48b22fd4
+[21:18:54] [main/INFO] (ModDiscoverer) Found mod file forge-1.20.1-1.0.20.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@48b22fd4
+[21:18:54] [main/INFO] (ModDiscoverer) Found mod file fabric-loader-2.7.4+0.15.3+1.20.1.jar of type LANGPROVIDER with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@48b22fd4
+[21:18:54] [main/INFO] (ModDiscoverer) Found mod file fabric-rendering-v1-3.0.8+66e9a48f77.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@48b22fd4
+[21:18:54] [main/INFO] (ModDiscoverer) Found mod file fabric-events-interaction-v0-0.6.2+0d0bd5a777.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@48b22fd4
+[21:18:54] [main/INFO] (ModDiscoverer) Found mod file fabric-networking-api-v1-1.3.11+503a202477.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@48b22fd4
+[21:18:54] [main/INFO] (ModDiscoverer) Found mod file fabric-command-api-v2-2.2.13+561530ec77.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@48b22fd4
+[21:18:54] [main/INFO] (ModDiscoverer) Found mod file fabric-api-base-0.4.31+ef105b4977.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@48b22fd4
+[21:18:54] [main/INFO] (JarInJarDependencyLocator) No dependencies to load found. Skipping!
