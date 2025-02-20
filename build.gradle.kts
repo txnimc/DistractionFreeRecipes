@@ -5,23 +5,27 @@ val templateSettings = object : BlahajSettings {
 	// -------------------- Dependencies ---------------------- //
 	override val depsHandler: BlahajDependencyHandler get() = object : BlahajDependencyHandler {
 		override fun addGlobal(mod : ModData, deps: DependencyHandler) {
-			deps.modImplementation(modrinth("emi", "1.1.18+${mod.mcVersion}+${mod.loader}"))
+			deps.modCompileOnly(modrinth("emi", "1.1.18+${mod.mcVersion}+${mod.loader}"))
+			deps.modCompileOnly("mezz.jei:jei-${mod.mcVersion}-${mod.loader}:${when (mod.mcVersion) {
+				"1.21.1" -> "19.21.0.247"
+				"1.20.1" -> "15.20.0.105"
+				else -> ""
+			}}")
 
+			deps.modImplementation("me.shedaniel:RoughlyEnoughItems-${mod.loader}:${when (mod.mcVersion) {
+				"1.21.1" -> "16.0.788"
+				"1.20.1" -> "12.1.785"
+				else -> ""
+			}}")
 		}
 
 		override fun addFabric(mod : ModData, deps: DependencyHandler) {
-			when (mod.mcVersion) {
-				"1.21.1" -> {
 
-				}
-				"1.20.1" -> {
-
-				}
-			}
 		}
 
 		override fun addForge(mod : ModData, deps: DependencyHandler) {
-
+			deps.compileOnly(deps.annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.1")!!)
+			deps.implementation(deps.include("io.github.llamalad7:mixinextras-forge:0.4.1")!!)
 		}
 
 		override fun addNeo(mod : ModData, deps: DependencyHandler) {
@@ -82,4 +86,6 @@ repositories {
 	maven("https://maven.su5ed.dev/releases")
 	maven("https://maven.fabricmc.net")
 	maven("https://maven.shedaniel.me/")
+	maven("https://maven.blamejared.com/")
+	maven("https://modmaven.dev")
 }

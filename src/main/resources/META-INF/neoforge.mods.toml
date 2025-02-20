@@ -8,14 +8,21 @@ issueTrackerURL = "https://github.com/${github}/${name}/issues"
 [[mods]]
 modId="${id}"
 displayName="${display_name}"
-version="${modversion}"
 authors="${author}"
+version="${modversion}"
 description="${description}"
 logoFile="assets/${namespace}/textures/mod_logo.png"
 displayURL = "https://github.com/${github}/${name}/"
 
 [[mixins]]
 config = "mixins.${id}.json"
+
+[[dependencies."${id}"]]
+modId="txnilib"
+mandatory=true
+versionRange="*"
+ordering="NONE"
+side="BOTH"
 
 [[dependencies."${id}"]]
 modId="minecraft"

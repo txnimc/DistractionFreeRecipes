@@ -3,13 +3,19 @@
   "package": "toni.distractionfreerecipes.mixins",
   "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8",
+  "plugin": "toni.distractionfreerecipes.MixinPlugin",
   "mixins": [
+    "EMIScreenManagerMixin",
+    "JEICombinedInputHandlerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
   },
   "client": [
     "EMIEditBoxMixin",
-    "EMISidebarPanelMixin"
+    "EMISidebarPanelMixin",
+    "JEIIngredientListOverlayMixin",
+    "REIConfigObjectImplMixin",
+    "REIOverlayMixin"
   ]
 }
